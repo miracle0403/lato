@@ -1,0 +1,1 @@
+npm install express-validator passport passport-local express-mysql-session mysql express-session bcrypt-nodejs express-flash-messages helmet connect-ensure-login

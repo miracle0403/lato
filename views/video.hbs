@@ -1,0 +1,37 @@
+<!-- Portfolio Grid -->
+<section class="bg-light" id="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+			  <h2 class="section-heading text-uppercase">Our Videos</h2>
+			  <h3 class="section-subheading text-muted">Our recent videos.</h3>
+			</div>
+		</div>
+	</div>
+		<div class="container-fluid">
+			<div class="row">
+				{{#if videos}}
+					{{#each videos}}
+				
+					<div class="col-md-4">
+						<a href = "https://{{link}}">
+							
+						</a>
+						
+					<div class="portfolio-caption">
+						<h4>{{title}}</h4>
+				   
+						<div class = "p text-justify text-muted">
+							{{description}}
+						</div>
+					</div>
+			</div>
+		</div>
+        
+				{{/each}}
+			{{/if}}
+	
+	  
+	  
+	</div>
+  </section>
