@@ -1,22 +1,14 @@
 var mysql = require('mysql');
 var server = require ('./app.js');
 
-var pool  =  mysql.createPool({
+var pool  =   mysql.createPool({
   multipleStatements: true,
   connectionLimit : 100,
   waitForConnections: true,
-  host: "localhost",
-  user: "root",
-  password: '',
-  database: 'lato'
-}) ||  mysql.createPool({
-  multipleStatements: true,
-  connectionLimit : 100,
-  waitForConnections: true,
-  DB_HOST: "us-cdbr-iron-east-02.cleardb.net",
-  DB_USERNAME: "be7a31828dd94c",
-  DB_PASSWORD: '8db565a4',
-  DB_DATABASE: 'heroku_1a05b6fa384c55e'
+  DB_HOST: "us-cdbr-iron-east-05.cleardb.net",
+  DB_USERNAME: "b5dcd57ac4ac9b",
+  DB_PASSWORD: '53774de9',
+  DB_DATABASE: 'heroku_1aa74e66b278cbb'
 });
 
 pool.getConnection( function ( err, con ){
