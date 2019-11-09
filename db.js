@@ -2,14 +2,7 @@ var mysql = require('mysql');
 var server = require ('./app.js');
 
 var pool  =   mysql.createPool({
-  multipleStatements: true,
-  connectionLimit : 100,
-  waitForConnections: true,
-  DB_HOST: "us-cdbr-iron-east-05.cleardb.net",
-  DB_USERNAME: "b5dcd57ac4ac9b",
-  DB_PASSWORD: '53774de9',
-  DB_DATABASE: 'heroku_1aa74e66b278cbb'
-});
+  mysql://b5dcd57ac4ac9b:53774de9@us-cdbr-iron-east-05.cleardb.net/heroku_1aa74e66b278cbb?reconnect=true});
 
 pool.getConnection( function ( err, con ){
 	if ( err ){
